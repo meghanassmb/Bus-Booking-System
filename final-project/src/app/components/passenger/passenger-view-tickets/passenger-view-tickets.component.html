@@ -1,0 +1,32 @@
+
+
+<div *ngIf="bookedTickets.length > 0">
+  <h2>Booked Tickets</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Ticket ID</th>
+        <th>Passenger Name</th>
+        <th>Passenger Count</th>
+        <th>Bus Number</th>
+        <th>Source</th>
+        <th>Destination</th>
+        <th>Ticket Price</th>
+        <th>Cancel ticket</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let ticket of bookedTickets">
+        <td>{{ticket.ticketId }}</td>
+        <td>{{passenger.passName}}</td>
+        <td>{{ passenger.passCount }}</td>
+        <td>{{ bus.busNumber }}</td>
+        <td>{{ bus.source}}</td>
+        <td>{{ bus.destination}}</td>
+        <td>{{bus.ticketPrice}}</td>
+        <td><button (click)="deleteTicket(ticket.ticketId)">Cancel</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+

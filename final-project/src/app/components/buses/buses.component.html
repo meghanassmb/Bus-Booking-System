@@ -1,0 +1,34 @@
+<div class="container">
+  <h2>Bus Details</h2>
+  <div *ngIf="errorMessage" class="alert alert-danger" role="alert">
+    {{ errorMessage }}
+  </div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Bus Number</th>
+        <th scope="col">Source</th>
+        <th scope="col">Destination</th>
+        <th scope="col">Arrival Date</th>
+        <th scope="col">Arrival Time</th>
+        <th scope="col">Total Seats</th>
+        <th scope="col">Available Seats</th>
+        <th scope="col">Ticket Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let bus of buses; let i = index">
+        <th scope="row">{{ i + 1 }}</th>
+        <td>{{ bus.busNumber }}</td>
+        <td>{{ bus.source }}</td>
+        <td>{{ bus.destination }}</td>
+        <td>{{ bus.arrivalDate }}</td>
+        <td>{{ bus.arrivalTime }}</td>
+        <td>{{ bus.totalSeats }}</td>
+        <td>{{ bus.availableSeats }}</td>
+        <td>{{ bus.ticketPrice }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

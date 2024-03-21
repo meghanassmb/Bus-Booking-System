@@ -1,0 +1,41 @@
+<!-- ticket-booking.component.html -->
+<div>
+    <h2>Book Ticket</h2>
+   
+    <div>
+        <label for="passName">Passenger name:</label>
+        <input type="text" id="passName" [(ngModel)]="passenger.passName">
+      </div><br>
+      <div>
+        <label for="passCount">Passenger count:</label>
+        <input type="text" id="passCount" [(ngModel)]="passenger.passCount">
+      </div><br>
+      
+      
+   
+    <!-- Display success message if available -->
+  <div *ngIf="successMessage" style="color: green;">
+    
+  </div>
+
+  <!-- Display error message if available -->
+  <div *ngIf="errorMessage" style="color: red;">
+   
+  </div>
+  
+    <button (click)="bookTicket()">Book Ticket</button>
+  
+    <!-- Display booking result if available 
+    <div *ngIf="bookingResult">
+      <h3>Booking Result:</h3>
+      <p>Ticket ID: {{ bookingResult.id }}</p>
+      <!-- Display other ticket details as needed 
+    </div>
+  
+   Handle errors if any 
+    <div *ngIf="bookingError">
+      <h3>Error:</h3>
+      <p>{{ bookingError }}</p>
+    </div>
+  </div>-->
+  
